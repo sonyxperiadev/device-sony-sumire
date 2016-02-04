@@ -17,4 +17,6 @@ include device/sony/common/CommonConfig.mk
 
 TARGET_BOOTLOADER_BOARD_NAME := E6653
 
+BOARD_KERNEL_CMDLINE += androidboot.hardware=sumire
+
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/clearpad/wakeup_gesture"
