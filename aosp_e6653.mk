@@ -38,9 +38,23 @@ PRODUCT_COPY_FILES += \
     device/sony/sumire/rootdir/system/etc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
     device/sony/sumire/rootdir/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml
 
+# Device Init
+PRODUCT_PACKAGES += \
+    init.recovery.sumire \
+    init.sumire \
+    ueventd.sumire
+
+# Lights
+PRODUCT_PACKAGES += \
+    lights.sumire
+
+# Simple PowerHAL
+PRODUCT_PACKAGES += \
+    power.sumire
+
 # NFC config
-PRODUCT_PACKAGES += nfc_nci.sumire
-ADDITIONAL_DEFAULT_PROPERTIES += ro.hardware.nfc_nci=sumire
+PRODUCT_PACKAGES += \
+    nfc_nci.sumire
 
 PRODUCT_NAME := aosp_e6653
 PRODUCT_DEVICE := sumire
