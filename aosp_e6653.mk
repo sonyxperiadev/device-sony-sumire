@@ -47,6 +47,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.sumire
 
+# NFC config
+PRODUCT_PACKAGES += \
+    nfc_nci.pn54x.default
+
 PRODUCT_NAME := aosp_e6653
 PRODUCT_DEVICE := sumire
 PRODUCT_MODEL := Xperia Z5 (AOSP)
