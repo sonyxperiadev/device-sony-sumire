@@ -14,53 +14,13 @@
 
 TARGET_KERNEL_CONFIG := aosp_kitakami_sumire_defconfig
 
-DEVICE_PACKAGE_OVERLAYS += \
-    device/sony/sumire/overlay
-
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
-$(call inherit-product, device/sony/kitakami/platform.mk)
-$(call inherit-product, vendor/sony/sumire/sumire-vendor.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product, device/sony/sumire/device.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
-
-PRODUCT_COPY_FILES += \
-    device/sony/sumire/rootdir/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
-    device/sony/sumire/rootdir/system/etc/BCM4356.hcd:system/etc/firmware/BCM43xx.hcd \
-    device/sony/sumire/rootdir/system/etc/wifi/bcmdhd.cal:system/etc/wifi/bcmdhd.cal \
-    device/sony/sumire/rootdir/system/etc/sensor_def_qcomdev.conf:system/etc/sensor_def_qcomdev.conf \
-    device/sony/sumire/rootdir/system/etc/thermanager.xml:system/etc/thermanager.xml \
-    device/sony/sumire/rootdir/system/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    device/sony/sumire/rootdir/system/etc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
-    device/sony/sumire/rootdir/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml
-
-# Device Init
-PRODUCT_PACKAGES += \
-    init.recovery.sumire \
-    init.sumire \
-    ueventd.sumire
-
-# Lights
-PRODUCT_PACKAGES += \
-    lights.sumire
-
-# Simple PowerHAL
-PRODUCT_PACKAGES += \
-    power.sumire
-
-# NFC config
-PRODUCT_PACKAGES += \
-    nfc_nci.pn54x.default
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 PRODUCT_NAME := aosp_e6653
 PRODUCT_DEVICE := sumire
 PRODUCT_MODEL := Xperia Z5 (AOSP)
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
-
-PRODUCT_AAPT_CONFIG := large
-PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=480 \
-    ro.usb.pid_suffix=1D9
