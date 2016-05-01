@@ -193,22 +193,16 @@
 		<threshold>
 			<mitigation name="usb" level="off" />
 		</threshold>
-		<threshold trigger="58700" clear="57200">
+		<threshold trigger="47700" clear="43000">
 			<mitigation name="usb" level="1" />
 		</threshold>
-		<threshold trigger="61700" clear="58700">
+		<threshold trigger="52000" clear="51400">
 			<mitigation name="usb" level="2" />
 		</threshold>
-		<threshold trigger="63100" clear="61700">
-			<mitigation name="usb" level="3" />
-		</threshold>
-		<threshold trigger="64300" clear="63100">
+		<threshold trigger="53200" clear="52600">
 			<mitigation name="usb" level="4" />
 		</threshold>
-		<threshold trigger="65400" clear="64300">
-			<mitigation name="usb" level="5" />
-		</threshold>
-		<threshold trigger="66600" clear="65400">
+		<threshold trigger="53600" clear="53200">
 			<mitigation name="usb" level="6" />
 		</threshold>
 	</configuration>
@@ -219,7 +213,7 @@
 			<mitigation name="charging" level="off" />
 		</threshold>
 		<threshold trigger="47700" clear="43000">
-			<mitigation name="charging" level="3" />
+			<mitigation name="charging" level="5" />
 		</threshold>
 		<threshold trigger="52000" clear="51400">
 			<mitigation name="charging" level="8" />
@@ -275,10 +269,16 @@
 		<threshold>
 			<mitigation name="cpu-a53" level="off" />
 		</threshold>
-		<threshold trigger="52600" clear="52000">
+		<threshold trigger="48900" clear="47700">
+			<mitigation name="cpu-a53" level="1" />
+		</threshold>
+		<threshold trigger="51400" clear="50200">
 			<mitigation name="cpu-a53" level="2" />
 		</threshold>
-		<threshold trigger="53600" clear="53200">
+		<threshold trigger="52600" clear="52000">
+			<mitigation name="cpu-a53" level="3" />
+		</threshold>
+		<threshold trigger="53600" clear="43200">
 			<mitigation name="cpu-a53" level="4" />
 		</threshold>
 		<threshold trigger="54500" clear="54000">
@@ -318,13 +318,13 @@
 		<threshold>
 			<mitigation name="cpu-a57" level="off" />
 		</threshold>
-		<threshold trigger="48900" clear="47700">
+		<threshold trigger="43000" clear="40000">
 			<mitigation name="cpu-a57" level="7" />
 		</threshold>
-		<threshold trigger="50200" clear="48900">
+		<threshold trigger="48900" clear="47700">
 			<mitigation name="cpu-a57" level="9" />
 		</threshold>
-		<threshold trigger="51400" clear="50200">
+		<threshold trigger="50200" clear="48900">
 			<mitigation name="cpu-a57" level="13" />
 		</threshold>
 	</configuration>
