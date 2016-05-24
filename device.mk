@@ -51,8 +51,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     nfc_nci.sumire
 
-# SimToolKit
+# Telephony Packages (AOSP)
 PRODUCT_PACKAGES += \
+    InCallUI \
     Stk
 
 PRODUCT_AAPT_CONFIG := large
