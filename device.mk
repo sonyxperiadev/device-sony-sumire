@@ -47,6 +47,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.sumire
 
+# Fingerprint HAL
+PRODUCT_PACKAGES += \
+    fingerprintd \
+    fingerprint.sumire
+
 # NFC config
 PRODUCT_PACKAGES += \
     nfc_nci.sumire
