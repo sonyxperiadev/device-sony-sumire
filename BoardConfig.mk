@@ -20,6 +20,9 @@ WIFI_BUS := PCIE
 
 BOARD_KERNEL_CMDLINE += androidboot.hardware=sumire
 
+# Platform
+PRODUCT_PLATFORM := kitakami
+
 # Recovery config
 BOARD_SONY_INIT_FLAGS += -DDEV_BLOCK_FOTA_NUM="32"
 BOARD_SONY_INIT_FLAGS += -DDEV_BLOCK_FOTA_MAJOR="259"
